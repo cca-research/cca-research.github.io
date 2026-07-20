@@ -14,7 +14,7 @@ paper: https://github.com/paper.pdf
 venue: Short Name of conference
 
 # optional fields:
-month: 6 # 1-12, used only to order papers within a year; not shown in the UI
+month: 6 # not shown, but to order paper within a year
 
 keywords:
   - keyword 1

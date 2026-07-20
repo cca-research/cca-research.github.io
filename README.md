@@ -32,20 +32,20 @@ And open a pull request with your new file.
 | `title`        | yes      | string          |                                        |
 | `authors`      | yes      | list of strings | at least one                          |
 | `institutions` | yes      | list of strings | at least one                          |
-| `year`         | yes      | number          | must match the filename's year        |
+| `year`         | yes      | number          | year published        |
 | `venue`        | yes      | string          | e.g. conference/workshop short name   |
-| `paper`        | yes      | string (URL)   | link to the paper / PDF               |
+| `paper`        | yes      | string (URL)   | link to the paper                |
 
 
 Optional Fields:
 | Field          | Required | Type            | Notes                                |
 | -------------- | -------- | --------------- | ------------------------------------- |
 | `keywords`     | no       | list of strings | e.g. GPU, accelerator        |
-| `hardware`     | no       | list of strings | hardware platform(s) used        |
-| `simulation`   | no       | list of strings | simulator(s) used (e.g. gem5, FVP, etc)    |
-| `code`         | no       | string (URL)    | link to a code repository             |
-| `slides`       | no       | string (URL)    | link to a slide deck                  |
-| `video`        | no       | string (URL)    | link to a video repository             |
+| `hardware`     | no       | list of strings | hardware platforms used        |
+| `simulation`   | no       | list of strings | simulators used    |
+| `code`         | no       | string (URL)    | link to code             |
+| `slides`       | no       | string (URL)    | link to slides                  |
+| `video`        | no       | string (URL)    | link to video             |
 | `web`          | no       | string (URL)    | link to a website                    |
 
 
