@@ -1,11 +1,27 @@
 title: "Bringing Confidential Computing to Android"
 
 authors:
-  - ""
-  
+  - "Mark Kuhne"
+  - "Supraja Sridhara"
+  - "Andrin Bertschi"
+  - "Nicolas Dutly"
+  - "Fabio Aliberti"
+  - "Srdjan Capkun"
+  - "Shweta Shinde"
+
+
 institutions:
-  - ""
+  - "ETH Zurich"
+
+keywords:
+  - Android
+  - pKVM
+  - AVF  
 
 year: 2026
-paper: ""
-venue: ""
+
+paper: "https://www.shwetashinde.com/publications/aster_mobisys26.pdf"
+venue: "MobiSys"
+web: "https://aster-cca.github.io/"
+code: "https://github.com/aster-cca"
+
