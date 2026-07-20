@@ -149,7 +149,7 @@ body {
   display: flex;
   justify-content: space-between;
   color: var(--muted);
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   margin-top: 0.6rem;
 }
 
@@ -226,6 +226,10 @@ body {
   margin-top: 0.3rem;
   padding-top: 0.5rem;
   border-top: 1px solid var(--border);
+}
+
+.table-scroll {
+  overflow-x: auto;
 }
 
 .paper-table {
@@ -386,6 +390,12 @@ body {
   display: none !important;
 }
 
+/* If Year is hidden, Paper becomes the first column -- drop its sticky
+   offset so it doesn't leave a gap where Year used to be. */
+.paper-table.hide-year .col-paper {
+  left: 0;
+}
+
 .paper-table tbody td {
   padding: 0.5rem 0.6rem;
   border-bottom: 1px solid var(--border);
@@ -406,6 +416,34 @@ body {
   min-width: 16rem;
   max-width: 32rem;
   position: relative;
+}
+
+/* Freeze the first two columns (Year, Paper) so they stay in view while
+   scrolling horizontally through the rest of a wide table. */
+.col-year,
+.col-paper {
+  position: sticky;
+  background: var(--bg);
+  z-index: 2;
+}
+
+.col-year {
+  left: 0;
+}
+
+.col-paper {
+  left: 4rem;
+  box-shadow: 2px 0 4px -2px rgba(0, 0, 0, 0.15);
+}
+
+.paper-table thead th.col-year,
+.paper-table thead th.col-paper {
+  z-index: 3;
+}
+
+.paper-table tbody tr:hover .col-year,
+.paper-table tbody tr:hover .col-paper {
+  background: var(--row-hover);
 }
 
 .col-keywords {
@@ -616,6 +654,13 @@ body {
     min-width: 0;
     padding: 0.5rem 0;
     border-bottom: none;
+  }
+
+  .col-year,
+  .col-paper {
+    position: static;
+    background: none;
+    box-shadow: none;
   }
 
   .paper-table tbody tr:hover {
