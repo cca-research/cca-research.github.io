@@ -1,0 +1,26 @@
+title: "OpenCCA: An Open Framework to Enable Arm CCA Research"
+authors:
+  - Andrin Bertschi
+  - Shweta Shinde
+  
+institutions:
+  - ETH Zurich
+year: 2025
+
+venue: SysTEX
+
+hardware:
+  - Rock 5b
+  - test
+
+simulation:
+  - Arm FVP
+  - QEMU
+
+keywords:
+  - framework
+  - hardware emulation
+
+paper: https://opencca.github.io/assets/opencca_systex25.pdf
+web: https://opencca.github.io/
+code: https://github.com/opencca/opencca

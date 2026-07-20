@@ -1,0 +1,10 @@
+{{ $rawPapers := (hugo.Data).papers }}
+{{ $papers := slice }}
+{{ range $id, $paper := $rawPapers }}
+  {{ $month := $paper.month | default 0 }}
+  {{ $sortKey := add (mul $paper.year 100) $month }}
+  {{ $papers = $papers | append (merge $paper (dict "id" $id "sortKey" $sortKey)) }}
+{{ end }}
+{{ $papers = sort $papers "title" "asc" }}
+{{ $papers = sort $papers "sortKey" "desc" }}
+{{ return $papers }}

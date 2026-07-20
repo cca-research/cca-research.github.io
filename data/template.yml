@@ -1,0 +1,34 @@
+# required fields:
+
+title: "Paper Title"
+authors:
+  - Author 1
+  - Author 2
+institutions:
+  - University 1
+  - University 2
+
+year: 2025
+paper: https://github.com/paper.pdf
+
+venue: Short Name of conference
+
+# optional fields:
+month: 6 # 1-12, used only to order papers within a year; not shown in the UI
+
+keywords:
+  - keyword 1
+  - keyword 2
+
+hardware:
+  - Board 1
+  - Board 2
+
+simulation:
+  - Arm FVP
+  - QEMU
+
+code: https://github.com/code
+slides: https://github.com/slides
+web: https://github.com/website
+video: https://github.com/video

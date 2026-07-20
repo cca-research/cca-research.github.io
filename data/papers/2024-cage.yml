@@ -1,0 +1,35 @@
+title: "CAGE: Complementing Arm CCA with GPU Extensions"
+authors:
+  - Chenxu Wang
+  - Fengwei Zhang
+  - Yunjie Deng
+  - Kevin Leach
+  - Jiannong Cao
+  - Zhenyu Ning
+  - Shoumeng Yan
+  - Zhengyu He
+  
+institutions:
+  - Southern University of Science and Technology
+  - The Hong Kong Polytechnic University
+  - Vanderbilt University
+  - Hunan University
+  - Ant Group
+
+year: 2024
+paper: https://www.ndss-symposium.org/ndss-paper/cage-complementing-arm-cca-with-gpu-extensions/
+code: https://github.com/Compass-All/NDSS24-CAGE
+
+venue: NDSS
+
+hardware:
+  - Juno R2
+
+simulation:
+  - Arm FVP
+
+keywords:
+  - accelerators
+  - GPU  
+
+
