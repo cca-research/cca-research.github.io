@@ -14,22 +14,22 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #0f1115;
-    --fg: #e5e7eb;
-    --muted: #9ca3af;
-    --border: #262a33;
-    --accent: #f87171;
-    --row-hover: #171a21;
+    --bg: #282c35;
+    --fg: #eef0f2;
+    --muted: #a9b2bf;
+    --border: #3f4552;
+    --accent: #f4877e;
+    --row-hover: #333947;
   }
 }
 
 :root[data-theme="dark"] {
-  --bg: #0f1115;
-  --fg: #e5e7eb;
-  --muted: #9ca3af;
-  --border: #262a33;
-  --accent: #f87171;
-  --row-hover: #171a21;
+  --bg: #282c35;
+  --fg: #eef0f2;
+  --muted: #a9b2bf;
+  --border: #3f4552;
+  --accent: #f4877e;
+  --row-hover: #333947;
 }
 
 :root[data-theme="light"] {
@@ -226,16 +226,6 @@ body {
   margin-top: 0.3rem;
   padding-top: 0.5rem;
   border-top: 1px solid var(--border);
-}
-
-.table-scroll {
-  overflow-x: auto;
-  /* `overflow-x: auto` forces `overflow-y` to clip too (per the CSS overflow
-     pairing rule), so with few rows an open filter dropdown could get cut
-     off and force an inner scrollbar. Reserve enough height for the tallest
-     possible dropdown panel (search box + select-all row + 22rem list) plus
-     the header/filter rows above it. */
-  min-height: 31rem;
 }
 
 .paper-table {
@@ -527,7 +517,7 @@ body {
 }
 
 .paper-links {
-  margin-top: 0.2rem;  
+  margin-top: 0.3rem;
   display: flex;
   gap: 0.6rem;
 }
@@ -591,12 +581,16 @@ body {
 
   .table-scroll {
     min-height: 0;
+    overflow-x: visible;
   }
 
   .paper-table,
   .paper-table tbody {
     display: block;
-    min-width: 0;
+    /* `!important` beats the inline `min-width` that search.js sets on the
+       table for the desktop column layout -- without it, the table stays
+       wider than the viewport on mobile and forces horizontal scroll. */
+    min-width: 0 !important;
     width: 100%;
   }
 
@@ -609,6 +603,7 @@ body {
     border-radius: 10px;
     padding: 0.85rem 0.9rem;
     margin-bottom: 0.75rem;
+    /* background-color: red; */
   }
 
   .paper-table tr[hidden] {
@@ -634,7 +629,7 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.03em;
     color: var(--muted);
-    margin-bottom: 0.1rem;
+    /* margin-bottom: 0.1rem; */
   }
 
   .paper-table tbody td.col-year {
@@ -642,7 +637,8 @@ body {
     width: auto;
     font-weight: 600;
     color: var(--accent);
-    margin-bottom: 0.2rem;
+    /* margin-bottom: 0.2rem; */
+    /* background-color: red; */
   }
 
   .paper-table tbody td.col-venue {
@@ -658,6 +654,7 @@ body {
   }
 
   .col-paper {
+    margin-top: -0.4rem;
     order: 3;
   }
 
@@ -675,7 +672,7 @@ body {
 
   .col-institution {
     order: 7;
-    margin-top: 0.4rem;
+    /* margin-top: 0.4rem; */
   }
 
   .col-artifact {

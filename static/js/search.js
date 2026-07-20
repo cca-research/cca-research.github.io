@@ -80,26 +80,8 @@
   var columnsPanel = document.getElementById("columns-panel");
   var columnCheckboxes = columnsPanel ? Array.from(columnsPanel.querySelectorAll("input[data-col]")) : [];
 
-  // Mirrors each column's CSS width (in rem) so the table's min-width can be
-  // recomputed from exactly the columns currently visible, rather than a
-  // static all-columns-shown worst case: hiding columns actually shrinks the
-  // table, and showing enough of them triggers horizontal scroll (instead of
-  // squeezing every column narrower than its CSS width) right when the
-  // visible columns stop fitting.
-  var COLUMN_WIDTH_REM = { year: 4, keywords: 10, venue: 7, hardware: 9, simulation: 9, institution: 12, artifact: 5 };
-  var PAPER_MIN_REM = 16;
-
-  function updateTableMinWidth() {
-    var total = PAPER_MIN_REM;
-    columnCheckboxes.forEach(function (checkbox) {
-      if (checkbox.checked) total += COLUMN_WIDTH_REM[checkbox.dataset.col] || 0;
-    });
-    table.style.minWidth = total + "rem";
-  }
-
   function setColumnVisibility(checkbox) {
     table.classList.toggle("hide-" + checkbox.dataset.col, !checkbox.checked);
-    updateTableMinWidth();
   }
 
   columnCheckboxes.forEach(function (checkbox) {
