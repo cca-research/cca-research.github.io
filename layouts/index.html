@@ -40,7 +40,6 @@
           <label><input type="checkbox" data-col="simulation"> Simulation</label>
           <label><input type="checkbox" data-col="institution" checked> Institution</label>
           <label><input type="checkbox" data-col="artifact"> Artifact</label>
-          <label class="columns-panel-divider"><input type="checkbox" id="toggle-short-authors"> Short authors</label>
         </div>
       </div>
     </div>
@@ -120,14 +119,7 @@
                 <span class="title-link-arrow">&#8599;</span></a>{{ else }}{{ .title }}{{ end }}
             </div>
             {{ if .authors }}
-            <div class="paper-authors">
-              {{ if gt (len .authors) 1 }}
-              <span class="authors-short">{{ index .authors 0 }}, <button type="button" class="authors-toggle">et al.</button></span>
-              <span class="authors-full" hidden>{{ delimit .authors ", " }}</span>
-              {{ else }}
-              {{ delimit .authors ", " }}
-              {{ end }}
-            </div>
+            <div class="paper-authors">{{ delimit .authors ", " }}</div>
             {{ end }}
             {{ if or .code .slides .web .video }}
             <div class="paper-links">

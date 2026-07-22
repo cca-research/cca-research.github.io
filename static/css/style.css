@@ -59,7 +59,7 @@ body {
 }
 
 .nav-inner {
-  max-width: 960px;
+  max-width: 1440px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -114,7 +114,7 @@ body {
 }
 
 .page {
-  max-width: 960px;
+  max-width: 1440px;
   margin: 0 auto;
   padding: 1.25rem 1.25rem 4rem;
 }
@@ -220,12 +220,6 @@ body {
   gap: 0.4rem;
   cursor: pointer;
   white-space: nowrap;
-}
-
-.columns-panel-divider {
-  margin-top: 0.3rem;
-  padding-top: 0.5rem;
-  border-top: 1px solid var(--border);
 }
 
 .paper-table {
@@ -482,24 +476,6 @@ body {
   color: var(--muted);
   font-size: 0.85rem;
   margin-top: 0.1rem;
-}
-
-.authors-toggle {
-  font: inherit;
-  color: var(--accent);
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  text-decoration: underline;
-}
-
-.paper-table.show-full-authors .authors-short {
-  display: none;
-}
-
-.paper-table.show-full-authors .authors-full {
-  display: inline;
 }
 
 .institutions {

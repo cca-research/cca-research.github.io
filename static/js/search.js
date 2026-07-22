@@ -92,29 +92,11 @@
     });
   });
 
-  // Independent of the per-column visibility above: a single switch that
-  // expands every "First Author, et al." byline to the full author list.
-  var shortAuthorsToggle = document.getElementById("toggle-short-authors");
-  function applyAuthorsMode() {
-    table.classList.toggle("show-full-authors", !shortAuthorsToggle.checked);
-  }
-  if (shortAuthorsToggle) {
-    applyAuthorsMode();
-    shortAuthorsToggle.addEventListener("change", function () {
-      applyAuthorsMode();
-      persist();
-    });
-  }
-
   function resetColumns() {
     columnCheckboxes.forEach(function (checkbox) {
       checkbox.checked = checkbox.defaultChecked;
       setColumnVisibility(checkbox);
     });
-    if (shortAuthorsToggle) {
-      shortAuthorsToggle.checked = shortAuthorsToggle.defaultChecked;
-      applyAuthorsMode();
-    }
   }
 
   // --- Dropdown helper (shared by the Columns menu and each column filter) ---
@@ -294,15 +276,14 @@
   var resetBtn = document.getElementById("reset-filters");
 
   // --- Persist selection across visits ---
-  // Sticks to localStorage: column visibility, short-authors mode, filter
-  // selections, and sort. The free-text search query is deliberately left
-  // out -- resurrecting an old query on a fresh visit would be surprising.
+  // Sticks to localStorage: column visibility, filter selections, and sort.
+  // The free-text search query is deliberately left out -- resurrecting an
+  // old query on a fresh visit would be surprising.
   var STORAGE_KEY = "arm-cca-research:table-state";
 
   function getState() {
     return {
       columns: columnCheckboxes.map(function (cb) { return [cb.dataset.col, cb.checked]; }),
-      shortAuthors: shortAuthorsToggle ? shortAuthorsToggle.checked : true,
       filters: FILTERS.map(function (f) { return [f.col, Object.keys(f.selected).sort()]; }),
       sort: currentSort
     };
@@ -315,11 +296,6 @@
       checkbox.checked = entry[1];
       setColumnVisibility(checkbox);
     });
-
-    if (shortAuthorsToggle && typeof state.shortAuthors === "boolean") {
-      shortAuthorsToggle.checked = state.shortAuthors;
-      applyAuthorsMode();
-    }
 
     FILTERS.forEach(function (filter) {
       var entry = state.filters.find(function (f) { return f[0] === filter.col; });
@@ -383,15 +359,4 @@
       updateResetButtonState();
     });
   }
-
-  // --- Expand/collapse truncated author lists ---
-  table.querySelectorAll(".authors-toggle").forEach(function (btn) {
-    btn.addEventListener("click", function (e) {
-      e.stopPropagation();
-      var container = btn.closest(".paper-authors");
-      var full = container.querySelector(".authors-full");
-      full.hidden = !full.hidden;
-      container.querySelector(".authors-short").hidden = !full.hidden;
-    });
-  });
 })();
