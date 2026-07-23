@@ -1,11 +1,17 @@
 title: "Portal: Fast and Secure Device Access with Arm CCA for Modern Arm Mobile System-on-Chips (SoCs)"
 
 authors:
-  - ""
-  
+- Fan Sang
+- Jaehyuk Lee
+- Xiaokuan Zhang
+- Taesoo Kim  
+
 institutions:
-  - ""
+  - "Georgia Institute of Technology"
+  - "George Mason University"
 
 year: 2025
-paper: ""
-venue: ""
+paper: "https://taesoo.kim/pubs/2025/sang:portal.pdf"
+venue: "IEEE S&P"
+web: https://ieeexplore.ieee.org/document/11023448
+code: https://github.com/sslab-gatech/portal

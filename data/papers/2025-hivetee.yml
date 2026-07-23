@@ -1,11 +1,13 @@
 title: "HiveTEE: Scalable and Fine-Grained Isolated Domains With RME and MTE Co-Assisted"
 
 authors:
-  - ""
+  - "Haoyang Huang"
+  - "Fengwei Zhang"
   
 institutions:
-  - ""
+  - "Southern University of Science and Technology"
 
-year: 2025
-paper: ""
-venue: ""
+year: 2026
+paper: "https://fengweiz.github.io/paper/hivetee-tifs26.pdf"
+venue: "TIFS"
+web: https://ieeexplore.ieee.org/document/11371308

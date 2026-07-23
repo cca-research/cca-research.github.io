@@ -93,10 +93,10 @@
             {{ end }}
             {{ if or .code .slides .web .video }}
             <div class="paper-links">
-              {{ if .code }}<a href="{{ .code }}" target="_blank" rel="noopener">Code &#8599;</a>{{ end }}
-              {{ if .slides }}<a href="{{ .slides }}" target="_blank" rel="noopener">Slides &#8599;</a>{{ end }}
               {{ if .web }}<a href="{{ .web }}" target="_blank" rel="noopener">Web &#8599;</a>{{ end }}
+              {{ if .code }}<a href="{{ .code }}" target="_blank" rel="noopener">Code &#8599;</a>{{ end }}
               {{ if .video }}<a href="{{ .video }}" target="_blank" rel="noopener">Video &#8599;</a>{{ end }}
+              {{ if .slides }}<a href="{{ .slides }}" target="_blank" rel="noopener">Slides &#8599;</a>{{ end }}
             </div>
             {{ end }}
           </td>
