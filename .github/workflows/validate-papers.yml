@@ -1,0 +1,56 @@
+name: Validate papers
+
+on:
+  pull_request:
+    paths:
+      - "data/papers/**"
+  workflow_dispatch:
+  
+permissions:
+  pull-requests: write
+  contents: read 
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install pyyaml
+
+      - name: Run validator
+        id: validate
+        run: |
+          set +e
+          python3 scripts/validate.py > report.md
+          echo "exit_code=$?" >> "$GITHUB_OUTPUT"
+          cat report.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Comment on PR
+        if: github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require("fs");
+            const marker = "<!-- paper-validation -->";
+            const body = marker + "\n```\n" + fs.readFileSync("report.md", "utf8") + "\n```";
+
+            const { data: comments } = await github.rest.issues.listComments({
+              ...context.repo,
+              issue_number: context.issue.number,
+            });
+            const existing = comments.find((c) => c.body.startsWith(marker));
+
+            if (existing) {
+              await github.rest.issues.updateComment({ ...context.repo, comment_id: existing.id, body });
+            } else {
+              await github.rest.issues.createComment({ ...context.repo, issue_number: context.issue.number, body });
+            }
+
+      - name: Fail if the validator found errors
+        if: steps.validate.outputs.exit_code != '0'
+        run: exit 1
