@@ -1,0 +1,23 @@
+baseURL = "https://cca-research.github.io/"
+locale = "en-us"
+title = "CCA Research Index"
+disableKinds = ["taxonomy", "term"]
+
+[params]
+  description = "A community-maintained overview of academic research on Arm Confidential Compute Architecture."
+  githubRepo = "https://github.com/cca-research/cca-research.github.io"
+  openCcaUrl = "https://opencca.github.io"
+  googleSheets = "https://docs.google.com/spreadsheets/d/1ApTfQzkX41hUlVmHPo386w_pHxScS1neg__o_GDopcs/edit?usp=sharing"
+  image = "header.png"
+
+[build]
+  writeStats = false
+
+[outputFormats.CSV]
+  mediaType = "text/csv"
+  baseName = "papers"
+  isPlainText = true
+  notAlternative = true
+
+[outputs]
+  home = ["HTML", "CSV"]

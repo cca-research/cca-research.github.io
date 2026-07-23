@@ -1,0 +1,135 @@
+{{/* This file is generated with help of an LLM */}}
+{{ define "main" }}
+{{ $papers := partial "papers-data.html" . }}
+
+<div class="page">
+  <header class="site-header">
+    <p class="tagline">
+      A community-maintained overview of academic research on <a class="color-muted" href="https://www.arm.com/architecture/security-features/arm-confidential-compute-architecture">Arm Confidential Compute Architecture</a>.
+    </p>
+
+    <input
+      type="search"
+      id="paper-search"
+      class="search-box"
+      placeholder="Search papers, authors, institutions..."
+      autocomplete="off"
+    >
+
+    <div class="meta-row">
+      <span id="paper-count">{{ len $papers }} paper{{ if ne (len $papers) 1 }}s{{ end }}</span>
+      <span class="updated">Updated {{ now.Format "Jan 2, 2006" }}</span>
+
+    </div>
+  </header>
+
+  <main>
+    <div class="table-controls">
+      <!-- {{ with .Site.Params.googleSheets }}
+        <a class="csv-export-link" href="{{ . }}" download>Google Sheet</a>
+      {{ end }} -->
+      <a class="csv-export-link" href="{{ "papers.csv" | relURL }}" download>Download CSV</a>
+      <button type="button" class="reset-filters-btn" id="reset-filters">Reset filters</button>
+      <div class="columns-menu">
+        <button type="button" class="columns-btn" id="columns-toggle">Columns &#9662;</button>
+        <div class="columns-panel" id="columns-panel" hidden>
+          <label><input type="checkbox" data-col="year" checked> Year</label>
+          <label><input type="checkbox" data-col="venue" checked> Venue</label>
+          <label><input type="checkbox" data-col="institution" checked> Institution</label>
+          <label><input type="checkbox" data-col="artifact"> Artifact</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="table-scroll">
+    <table class="paper-table hide-artifact" id="paper-table">
+      <thead>
+        <tr>
+          <th class="col-year" data-col="year" data-sort-type="number">Year</th>
+          <th class="col-paper" data-col="title" data-sort-type="text">Paper</th>
+          <th class="col-venue" data-col="venue" data-sort-type="text">Venue</th>
+          <th class="col-institution" data-col="institution" data-sort-type="text">Institution</th>
+          <th class="col-artifact" data-col="artifact" data-sort-type="text">Artifact</th>
+        </tr>
+        <tr class="filter-row">
+          <th class="col-year">
+            <div class="filter-dropdown" data-filter="year">
+              <button type="button" class="filter-btn">All</button>
+              <div class="filter-panel" hidden></div>
+            </div>
+          </th>
+          <th class="col-paper"></th>
+          <th class="col-venue">
+            <div class="filter-dropdown" data-filter="venue">
+              <button type="button" class="filter-btn">All</button>
+              <div class="filter-panel" hidden></div>
+            </div>
+          </th>
+          <th class="col-institution">
+            <div class="filter-dropdown" data-filter="institution">
+              <button type="button" class="filter-btn">All</button>
+              <div class="filter-panel" hidden></div>
+            </div>
+          </th>
+          <th class="col-artifact"></th>
+        </tr>
+      </thead>
+      <tbody>
+        {{ range $papers }}
+        <tr
+          data-year="{{ .year }}"
+          data-venue="{{ .venue }}"
+          data-institutions="{{ delimit .institutions "|" }}"
+          data-artifact="{{ .code }}"
+        >
+          <td class="col-year">{{ .year }}</td>
+          <td class="col-paper">
+            <div class="paper-title">
+              {{ if .paper }}<a class="paper-title-link" href="{{ .paper }}" target="_blank" rel="noopener">{{ .title }}
+                <span class="title-link-arrow">&#8599;</span></a>{{ else }}{{ .title }}{{ end }}
+            </div>
+            {{ if .authors }}
+            <div class="paper-authors">{{ range $i, $a := .authors }}{{ if $i }}, {{ end }}<span class="author-name">{{ $a }}</span>{{ end }}</div>
+            {{ end }}
+            {{ if or .code .slides .web .video }}
+            <div class="paper-links">
+              {{ if .web }}<a href="{{ .web }}" target="_blank" rel="noopener">Web &#8599;</a>{{ end }}
+              {{ if .code }}<a href="{{ .code }}" target="_blank" rel="noopener">Code &#8599;</a>{{ end }}
+              {{ if .video }}<a href="{{ .video }}" target="_blank" rel="noopener">Video &#8599;</a>{{ end }}
+              {{ if .slides }}<a href="{{ .slides }}" target="_blank" rel="noopener">Slides &#8599;</a>{{ end }}
+            </div>
+            {{ end }}
+          </td>
+          <td class="col-venue">{{ .venue }}</td>
+          <td class="col-institution">
+            <span class="field-label">Institution</span>
+            <ul class="institutions">
+              {{ range .institutions }}<li>{{ . }}</li>{{ end }}
+            </ul>
+          </td>
+          <td class="col-artifact">
+            {{ if .code }}<span class="field-label">Artifact</span><a href="{{ .code }}" target="_blank" rel="noopener">Code &#8599;</a>{{ end }}
+          </td>
+        </tr>
+        {{ end }}
+      </tbody>
+    </table>
+    </div>
+
+    <p id="no-results" class="no-results" hidden>No papers match your search.</p>
+  </main>
+
+  <footer class="site-footer">
+    <p>If you found a mistake or want to a new paper, please open a pull request on
+      {{ with .Site.Params.githubRepo }}<a href="{{ . }}" target="_blank" rel="noopener">GitHub</a>{{ end }}.
+    </p>
+    <div class="footer-credit">
+      {{ with .Site.Params.openCcaUrl }}
+      <p>Created by <a href="{{ . }}" target="_blank" rel="noopener">OpenCCA</a></p>
+      {{ end }}
+    </div>
+  </footer>
+</div>
+
+<script src="{{ "js/search.js" | relURL }}"></script>
+{{ end }}

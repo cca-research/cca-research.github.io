@@ -1,0 +1,9 @@
+{{- $papers := partial "papers-data.html" . -}}
+{{- $header := slice "id" "year" "title" "authors" "institutions" "venue" "paper" "code" "slides" "web" "video" -}}
+{{ range $i, $col := $header }}{{ if $i }},{{ end }}"{{ $col }}"{{ end }}
+{{ range $papers -}}
+{{- $authors := .authors | default slice -}}
+{{- $institutions := .institutions | default slice -}}
+{{- $fields := slice .id .year .title (delimit $authors ", ") (delimit $institutions ", ") .venue .paper .code .slides .web .video -}}
+{{ range $i, $v := $fields }}{{ if $i }},{{ end }}"{{ replace ($v | default "") "\"" "\"\"" }}"{{ end }}
+{{ end -}}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Locale | default "en" }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} · {{ .Site.Title }}{{ end }}</title>
+  <meta name="description" content="{{ .Site.Params.description }}">
+  <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+
+
+
+
+<meta property="og:title" content="{{ site.Title }}">
+<meta property="og:description" content="{{ site.Params.description }}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ site.Home.Permalink }}">
+<meta property="og:site_name" content="{{ site.Title }}">
+<meta property="og:image" content="{{ site.Params.image | absURL }}">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ site.Title }}">
+<meta name="twitter:description" content="{{ site.Params.description }}">
+<meta name="twitter:image" content="{{ site.Params.image | absURL }}">
+
+<link rel="icon"
+      type="image/png"
+      href="{{ "favicon-96x96.png" | relURL }}"
+      sizes="96x96">
+
+<link rel="icon"
+      type="image/svg+xml"
+      href="{{ "favicon.svg" | relURL }}">
+
+<link rel="shortcut icon"
+      href="{{ "favicon.ico" | relURL }}">
+
+<link rel="apple-touch-icon"
+      href="{{ "apple-touch-icon.png" | relURL }}"
+      sizes="180x180">
+
+<link rel="manifest"
+      href="{{ "site.webmanifest" | relURL }}">
+  
+  <script>
+    (function () {
+      var stored = localStorage.getItem("theme");
+      document.documentElement.dataset.theme = stored || "light";
+    })();
+  </script>
+</head>
+<body>
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a class="nav-brand" href="{{ "/" | relURL }}">{{ .Site.Title }}</a>
+      <div class="nav-links">
+        {{ with .Site.Params.githubRepo }}
+        <a href="{{ . }}" target="_blank" rel="noopener">GitHub &#8599;</a>
+        {{ end }}
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode">
+          <span aria-hidden="true">&#9680;</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  {{ block "main" . }}{{ end }}
+  <script src="{{ "js/theme.js" | relURL }}"></script>
+</body>
+</html>

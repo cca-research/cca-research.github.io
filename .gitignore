@@ -1,0 +1,8 @@
+/public/
+/resources/_gen/
+.hugo_build.lock
+service-account*.json
+.venv
+tmp
+secretstmp2
+tmp
