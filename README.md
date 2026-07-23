@@ -1,3 +1,4 @@
+[![Hugo Github Pages](https://github.com/cca-research/cca-research.github.io/actions/workflows/hugo.yml/badge.svg)](https://github.com/cca-research/cca-research.github.io/actions/workflows/hugo.yml) 
 [![Validate papers](https://github.com/cca-research/cca-research.github.io/actions/workflows/validate-papers.yml/badge.svg)](https://github.com/cca-research/cca-research.github.io/actions/workflows/validate-papers.yml)
 # CCA Research Index
 
