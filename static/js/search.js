@@ -241,27 +241,102 @@
   }
 
   // --- Search ---
-  // Every query word must appear verbatim somewhere in the text --
+  // Every query token must appear verbatim somewhere in the text --
   // order-independent, so "shinde bertschi" still matches
-  // "Andrin Bertschi, Shweta Shinde".
-  function textMatches(text, query) {
-    if (!query) return true;
-    return query.split(/\s+/).filter(Boolean).every(function (queryWord) {
-      return text.indexOf(queryWord) !== -1;
+  // "Andrin Bertschi, Shweta Shinde". A "quoted phrase" is kept intact as a
+  // single token instead of being split into words, so it must match as a
+  // contiguous substring (used by click-to-search for exact matches).
+  var QUERY_TOKEN_RE = /"([^"]*)"|(\S+)/g;
+
+  function parseQueryTokens(query) {
+    var tokens = [];
+    var m;
+    QUERY_TOKEN_RE.lastIndex = 0;
+    while ((m = QUERY_TOKEN_RE.exec(query))) {
+      var token = m[1] !== undefined ? m[1] : m[2];
+      if (token) tokens.push(token);
+    }
+    return tokens;
+  }
+
+  function textMatches(text, queryTokens) {
+    return queryTokens.every(function (token) {
+      return text.indexOf(token) !== -1;
+    });
+  }
+
+  // --- Highlighting ---
+  // Wraps matched query words in <mark> within the visible, searchable
+  // parts of each row. Original markup is cached once so re-highlighting
+  // on every keystroke can start from a clean copy instead of stacking
+  // <mark> tags or losing nested elements (like the title link/arrow).
+  var HIGHLIGHT_SELECTOR = ".paper-title, .author-name, .col-venue, .institutions li";
+  var originalHTML = new WeakMap();
+
+  rows.forEach(function (row) {
+    row.querySelectorAll(HIGHLIGHT_SELECTOR).forEach(function (node) {
+      originalHTML.set(node, node.innerHTML);
+    });
+  });
+
+  function escapeRegExp(s) {
+    return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  }
+
+  function highlightNode(node, pattern) {
+    var container = el("div", { innerHTML: originalHTML.get(node) });
+    if (pattern) {
+      var walker = document.createTreeWalker(container, NodeFilter.SHOW_TEXT, null);
+      var textNodes = [];
+      var textNode;
+      while ((textNode = walker.nextNode())) textNodes.push(textNode);
+
+      textNodes.forEach(function (textNode) {
+        var text = textNode.nodeValue;
+        pattern.lastIndex = 0;
+        if (!pattern.test(text)) return;
+
+        var frag = document.createDocumentFragment();
+        var lastIndex = 0;
+        var m;
+        pattern.lastIndex = 0;
+        while ((m = pattern.exec(text))) {
+          if (m.index > lastIndex) frag.appendChild(document.createTextNode(text.slice(lastIndex, m.index)));
+          frag.appendChild(el("mark", { textContent: m[0] }));
+          lastIndex = m.index + m[0].length;
+        }
+        if (lastIndex < text.length) frag.appendChild(document.createTextNode(text.slice(lastIndex)));
+        textNode.parentNode.replaceChild(frag, textNode);
+      });
+    }
+    node.innerHTML = container.innerHTML;
+  }
+
+  function highlightRows(queryWords) {
+    var pattern = queryWords.length
+      ? new RegExp("(" + queryWords.map(escapeRegExp).join("|") + ")", "gi")
+      : null;
+    rows.forEach(function (row) {
+      row.querySelectorAll(HIGHLIGHT_SELECTOR).forEach(function (node) {
+        highlightNode(node, pattern);
+      });
     });
   }
 
   // --- Search box + combined filtering ---
   function applyFilters() {
     var query = input.value.trim().toLowerCase();
+    var queryTokens = parseQueryTokens(query);
     var visible = 0;
 
     rows.forEach(function (row) {
-      var match = textMatches(row.dataset.searchText, query) &&
+      var match = textMatches(row.dataset.searchText, queryTokens) &&
         FILTERS.every(function (filter) { return filterMatches(filter, row); });
       row.hidden = !match;
       if (match) visible++;
     });
+
+    highlightRows(queryTokens);
 
     countEl.textContent = visible + (visible === 1 ? " paper" : " papers");
     noResults.hidden = visible !== 0;
@@ -341,6 +416,20 @@
   });
   applyFilters();
   updateResetButtonState();
+
+  // --- Click-to-search ---
+  // Clicking an author, venue, or institution drops its text into the
+  // search box instead of requiring the user to type it themselves. It's
+  // quoted so it's treated as one exact phrase rather than being split into
+  // separately-matched words (see parseQueryTokens).
+  tbody.addEventListener("click", function (e) {
+    var target = e.target.closest(".author-name, .col-venue, .institutions li");
+    if (!target) return;
+    input.value = '"' + target.textContent.trim() + '"';
+    applyFilters();
+    updateResetButtonState();
+    input.focus();
+  });
 
   if (resetBtn) {
     resetBtn.addEventListener("click", function () {

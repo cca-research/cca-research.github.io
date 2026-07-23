@@ -481,6 +481,13 @@ body {
   text-decoration-color: color-mix(in srgb, var(--muted) 35%, transparent);
 }
 
+mark {
+  background: color-mix(in srgb, var(--accent) 35%, transparent);
+  color: var(--fg);
+  border-radius: 0.15em;
+  padding: 0 0.05em;
+}
+
 .institutions {
   color: var(--muted);
   margin: 0;

@@ -1,11 +1,19 @@
 title: "PrivCCA: Protection of Credentials Using ARM CCA from Privilege Escalation Attack"
 
 authors:
-  - ""
+  - Yuki Komori
+  - Hiroki Kuzuno
+  - Masaya Sato
+  - Makoto Takita
+  - Yoshiaki Shiraishi
   
 institutions:
-  - ""
+  - "Kobe University"
+  - "Okayama Prefectural University"
 
-year: 2026
-paper: ""
-venue: ""
+year: 2025
+month: 10
+
+# TODO: Is there a public pdf?
+paper: "https://ieeexplore.ieee.org/document/11260889"
+venue: "DSC"

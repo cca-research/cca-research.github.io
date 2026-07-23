@@ -1,11 +1,15 @@
 title: "CCX: Enabling Unmodified Intel SGX Applications on Arm CCA"
 
 authors:
-  - ""
+  - "Matti Schulze"
+  - "Thorsten Holz"
+  - "Felix Freiling"
   
 institutions:
-  - ""
+  - "FAU Erlangen-Nürnberg"
 
 year: 2026
-paper: ""
+month: 5
+
+paper: "https://arxiv.org/abs/2605.07548"
 venue: "arxiv"

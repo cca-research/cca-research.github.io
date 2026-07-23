@@ -1,11 +1,17 @@
 title: "Detecting Inconsistencies in Arm CCA's Formally Verified Specification"
 
 authors:
-  - ""
+  - "Changho Choi"
+  - "Xiang Cheng"
+  - "Bokdeuk Jeong"
+  - "Taesoo Kim"
   
 institutions:
-  - ""
+  - "Samsung Research"
+  - "Georgia Institute of Technology"
 
 year: 2026
-paper: ""
-venue: ""
+paper: "https://taesoo.kim/pubs/2026/choi:scope.pdf"
+venue: "ASPLOS"
+web: https://dl.acm.org/doi/10.1145/3779212.3790152
+code: https://github.com/islet-project/scope
