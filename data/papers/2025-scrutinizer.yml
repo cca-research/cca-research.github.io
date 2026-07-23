@@ -1,11 +1,26 @@
 title: "SCRUTINIZER: Towards Secure Forensics on Compromised TrustZone"
 
 authors:
-  - ""
+  - Yiming Zhang
+  - Fengwei Zhang
+  - Xiapu Luo
+  - Rui Hou 
+  - Xuhua Ding 
+  - Zhenkai Liang 
+  - Shoumeng Yan 
+  - Tao Wei 
+  - Zhengyu He
   
 institutions:
-  - ""
+  - Southern University of Science and Technology
+  - The Hong Kong Polytechnic University
+  - Chinese Academy of Sciences
+  - Singapore Management University
+  - National University of Singapore
+  - Ant Group
 
 year: 2025
-paper: ""
-venue: ""
+paper: "https://www.ndss-symposium.org/wp-content/uploads/2025-147-paper.pdf"
+venue: "NDSS"
+web: https://www.ndss-symposium.org/ndss-paper/scrutinizer-towards-secure-forensics-on-compromised-trustzone/
+slides: https://www.ndss-symposium.org/wp-content/uploads/7B-s0147-zhang-2025-02-15-09.09.15.pdf
