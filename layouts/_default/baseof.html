@@ -7,22 +7,40 @@
   <meta name="description" content="{{ .Site.Params.description }}">
   <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
 
-  <!--  Essential META Tags -->
-  <meta property="og:title" content="Arm CCA Research Papers">
-  <meta property="og:type" content="article" />
-  <meta property="og:url" content="https://cca-research.github.io">
-  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="shortcut icon" href="/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <link rel="manifest" href="/site.webmanifest" />
-  <meta name="twitter:card" content="summary_large_image">
-   <meta property="og:image" content="header.png">
 
-  <!--  Non-Essential,  -->
-  <meta property="og:description" content="A community-maintained overview of academic research on Arm Confidential Compute Architecture">
-  <meta property="og:site_name" content="Arm CCA Research List">
-  <!-- <meta name="twitter:image:alt" content="Alt text for image"> -->
+
+
+<meta property="og:title" content="{{ site.Title }}">
+<meta property="og:description" content="{{ site.Params.description }}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ site.Home.Permalink }}">
+<meta property="og:site_name" content="{{ site.Title }}">
+<meta property="og:image" content="{{ site.Params.image | absURL }}">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ site.Title }}">
+<meta name="twitter:description" content="{{ site.Params.description }}">
+<meta name="twitter:image" content="{{ site.Params.image | absURL }}">
+
+<link rel="icon"
+      type="image/png"
+      href="{{ "favicon-96x96.png" | relURL }}"
+      sizes="96x96">
+
+<link rel="icon"
+      type="image/svg+xml"
+      href="{{ "favicon.svg" | relURL }}">
+
+<link rel="shortcut icon"
+      href="{{ "favicon.ico" | relURL }}">
+
+<link rel="apple-touch-icon"
+      href="{{ "apple-touch-icon.png" | relURL }}"
+      sizes="180x180">
+
+<link rel="manifest"
+      href="{{ "site.webmanifest" | relURL }}">
   
   <script>
     (function () {
