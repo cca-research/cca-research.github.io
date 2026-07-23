@@ -26,16 +26,6 @@
     row.dataset.searchText = clone.textContent.toLowerCase();
   });
 
-  // --- Click anywhere in the paper cell to open the paper link ---
-  // Clicks on an actual <a> (title, code, slides, web, video) keep their
-  // own destination instead of being overridden by the row's paper link.
-  tbody.addEventListener("click", function (e) {
-    var cell = e.target.closest(".col-paper");
-    if (!cell || e.target.closest("a")) return;
-    var url = cell.closest("tr").dataset.paper;
-    if (url) window.open(url, "_blank", "noopener");
-  });
-
   // --- Sorting ---
   var headers = Array.from(table.querySelectorAll("thead tr:first-child th[data-col]"));
   var currentSort = { col: null, dir: null };

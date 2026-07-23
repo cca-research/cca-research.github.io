@@ -399,10 +399,6 @@ body {
   position: relative;
 }
 
-tr[data-paper]:not([data-paper=""]) .col-paper {
-  cursor: pointer;
-}
-
 .col-venue {
   width: 7rem;
   color: var(--muted);
@@ -456,8 +452,7 @@ tr[data-paper]:not([data-paper=""]) .col-paper {
   top: -0.3em;
 }
 
-.paper-title a:hover,
-.col-paper:hover .paper-title a {
+.paper-title a:hover {
   color: var(--accent);
   text-decoration: underline;
 }
