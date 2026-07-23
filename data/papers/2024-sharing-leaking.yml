@@ -1,11 +1,14 @@
 title: "Sharing is leaking: blocking transient-execution attacks with core-gapped confidential VMs"
 
 authors:
-  - ""
+  - "Charly Castes"
+  - "Andrew Baumann"
   
 institutions:
-  - ""
+  - "EPFL"
+  - Google
 
 year: 2024
-paper: ""
-venue: ""
+paper: "https://ab.id.au/papers/coregapvm-asplos24.pdf"
+venue: "ASPLOS"
+web: "https://research.google/pubs/sharing-is-leaking-blocking-transient-execution-attacks-with-core-gapped-confidential-vms/"

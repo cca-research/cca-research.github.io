@@ -1,12 +1,19 @@
 title: "GuaranTEE: Towards attestable and private ML with CCA"
 
 authors:
-  - ""
+  - Sandra Siby
+  - Sina Abdollahi
+  - Mohammad Maheri
+  - Marios Kogias
+  - Hamed Haddadi
   
 institutions:
-  - ""
+  - "Imperial College London"
+
 
 year: 2024
 
-paper: ""
-venue: ""
+paper: "https://dl.acm.org/doi/pdf/10.1145/3642970.3655845"
+venue: "EuroSys"
+web: https://dl.acm.org/doi/10.1145/3642970.3655845
+code: https://github.com/comet-cc/GuaranTEE

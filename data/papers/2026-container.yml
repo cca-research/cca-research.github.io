@@ -1,11 +1,21 @@
 title: "Shielded but Lightweight: Building Practical Confidential Containers with ARM CCA"
 
 authors:
-  - ""
-  
-institutions:
-  - ""
+  - Liantao Song
+  - Yiming Zhang
+  - Fengwei Zhang
+  - Yan Ding
+  - Bin Zhou
+  - Jie Yu
+  - Yusong Tan  
 
-year: 2025
-paper: ""
-venue: ""
+institutions:
+  - "National University of Defense Technology Changsha China"
+  - "Guangdong Polytechnic Normal University"
+  - "Southern University of Science and Technology Shenzhen"
+
+year: 2026
+month: 3
+
+paper: "https://arxiv.org/abs/2605.26018"
+venue: "arxiv"
