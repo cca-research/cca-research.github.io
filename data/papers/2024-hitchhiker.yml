@@ -1,0 +1,29 @@
+title: "The HitchHiker's Guide to High-Assurance System Observability Protection with Efficient Permission Switches"
+
+authors:
+  - Chuqi Zhang
+  - Jun Zeng
+  - Yiming Zhang
+  - Adil Ahmad
+  - Fengwei Zhang
+  - Hai Jin
+  - Zhenkai Liang
+  
+institutions:
+  - National University of Singapore
+  - Hangzhou China
+  - Southern University of Science and Technology China
+  - The Hong Kong Polytechnic University
+  - Arizona State University
+  - Huazhong University of Science and Technology
+
+
+year: 2024
+month: 10
+
+paper: https://fengweiz.github.io/paper/hitchhiker-ccs24.pdf
+web: "https://dl.acm.org/doi/10.1145/3658644.3690188"
+venue: "CCS"
+code: https://github.com/ASTERISC-Release/HitchHiker
+
+

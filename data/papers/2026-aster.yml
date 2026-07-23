@@ -1,0 +1,23 @@
+title: "Bringing Confidential Computing to Android"
+
+authors:
+  - "Mark Kuhne"
+  - "Supraja Sridhara"
+  - "Andrin Bertschi"
+  - "Nicolas Dutly"
+  - "Fabio Aliberti"
+  - "Srdjan Capkun"
+  - "Shweta Shinde"
+
+
+institutions:
+  - "ETH Zurich"
+
+year: 2026
+month: 6
+
+paper: "https://www.shwetashinde.com/publications/aster_mobisys26.pdf"
+venue: "MobiSys"
+web: "https://aster-cca.github.io/"
+code: "https://github.com/aster-cca"
+

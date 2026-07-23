@@ -1,0 +1,21 @@
+title: "Design and Verification of the Arm Confidential Compute Architecture"
+
+authors:
+  - Xupeng Li
+  - Xuheng Li
+  - Christoffer Dall
+  - Ronghui Gu
+  - Jason Nieh
+  - Yousuf Sait
+  - Gareth Stockwell
+  
+institutions:
+  - "Columbia University"
+  - "Arm"
+
+year: 2022
+month: 6
+paper: "https://www.usenix.org/system/files/osdi22-li.pdf"
+web: "https://www.usenix.org/conference/osdi22/presentation/li" 
+code: "https://github.com/columbia/VIA"
+venue: "OSDI"

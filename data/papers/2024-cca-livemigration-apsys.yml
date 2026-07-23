@@ -1,0 +1,18 @@
+title: "Designing and Implementing Live Migration Support for Arm-based Confidential VMs"
+
+authors:
+  - Fang-Jie Yang
+  - Jian-Lin Li
+  - Kaiwen Xue
+  - Shih-Wei Li  
+  
+institutions:
+  - "National Taiwan University"
+  - "Carnegie Mellon University"
+
+year: 2024
+month: 9
+
+paper: "https://dl.acm.org/doi/pdf/10.1145/3678015.3680488"
+web: https://dl.acm.org/doi/10.1145/3678015.3680488
+venue: "APSys"

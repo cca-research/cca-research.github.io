@@ -1,0 +1,16 @@
+title: "OpenCCA: An Open Framework to Enable Arm CCA Research"
+authors:
+  - Andrin Bertschi
+  - Shweta Shinde
+  
+institutions:
+  - ETH Zurich
+
+year: 2025
+month: 7
+
+venue: SysTEX
+
+paper: https://opencca.github.io/assets/opencca_systex25.pdf
+web: https://opencca.github.io/
+code: https://github.com/opencca/opencca

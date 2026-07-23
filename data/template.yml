@@ -1,0 +1,20 @@
+# required fields:
+
+title: "Paper Title"
+authors:
+  - Author 1
+  - Author 2
+institutions:
+  - University 1
+  - University 2
+
+year: 2025
+
+venue: Short Name of conference
+paper: https://github.com/paper.pdf
+
+# optional fields:
+month: 6
+code: https://github.com/code
+slides: https://github.com/slides
+web: https://github.com/website

@@ -1,0 +1,23 @@
+title: "Devlore: Device Interrupt Protection for Confidential VMs"
+
+authors:
+  - "Andrin Bertschi"
+  - "Supraja Sridhara"
+  - "Mark Kuhne"
+  - "Benedict Schlüter"
+  - "Friederike Groschupp"
+  - "Clément Thorens"
+  - "Nicolas Dutly"
+  - "Srdjan Capkun"
+  - "Shweta Shinde"
+
+institutions:
+  - "ETH Zurich"
+
+year: 2026
+month: 10
+
+paper: "https://arxiv.org/abs/2408.05835"
+venue: "RAID"
+web: "https://sectrs-devlore.github.io/"
+code: https://github.com/sectrs-devlore

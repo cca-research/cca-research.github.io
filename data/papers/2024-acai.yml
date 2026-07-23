@@ -1,0 +1,19 @@
+title: "ACAI: Protecting Accelerator Execution with Arm Confidential Computing Architecture"
+authors:
+  - Supraja Sridhara
+  - Andrin Bertschi
+  - Benedict Schlüter
+  - Mark Kuhne
+  - Fabio Aliberti
+  - Shweta Shinde
+  
+institutions:
+  - ETH Zurich
+
+year: 2024
+month: 8
+venue: Usenix Security
+
+paper: https://www.usenix.org/system/files/usenixsecurity24-sridhara.pdf
+code: https://github.com/sectrs-acai/acai
+web: "https://www.usenix.org/conference/usenixsecurity24/presentation/sridhara"

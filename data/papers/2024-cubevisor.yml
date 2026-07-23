@@ -1,0 +1,24 @@
+title: "CubeVisor: A Multi-realm Architecture Design for Running VM with ARM CCA"
+
+authors:
+  - Jiayun Chen
+  - Qihang Zhou
+  - Xiaolong Yan
+  - Nan Jiang
+  - Xiaoqi Jia
+  - Weijuan Zhang
+
+institutions:
+  - "Chinese Academy of Sciences"
+  - "University of Chinese Academy of Sciences"
+
+year: 2024
+month: 12
+
+paper: "https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10917736"
+venue: "ACSAC"
+web: "https://ieeexplore.ieee.org/document/10917736/"
+slides: "https://www.acsac.org/2024/files/web/slides/chen-93-cubevisor.pdf"
+
+
+

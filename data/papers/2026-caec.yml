@@ -1,0 +1,20 @@
+title: "Confidential, Attestable, and Efficient Inter-CVM Communication with Arm CCA"
+
+authors:
+  - Sina Abdollahi
+  - Amir Al Sadi
+  - David Kotz
+  - Marios Kogias
+  - Hamed Haddadi 
+
+institutions:
+  - Imperial College London
+  - Dartmouth College
+
+year: 2026
+month: 6
+
+paper: "https://arxiv.org/pdf/2512.01594"
+venue: "EuroSP"
+code: https://github.com/comet-cc/CAEC
+web: https://eurosp2026.ieee-security.org/program.html

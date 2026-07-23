@@ -1,0 +1,16 @@
+title: "CoKeMon: Configurable Kernel Monitoring by Decoupling Isolation"
+
+authors:
+  - Clément Thorens
+  - Shweta Shinde
+
+institutions:
+  - "ETH Zurich"
+
+year: 2026
+month: 8
+
+paper: "https://www.shwetashinde.org/publications/cokemon_usenix26.pdf"
+venue: "Usenix Security"
+web: https://www.usenix.org/conference/usenixsecurity26/presentation/thorens
+
