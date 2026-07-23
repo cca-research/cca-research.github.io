@@ -1,12 +1,26 @@
-title: "virtcca: Virtualized arm confidential compute architecture with trustzone"
+title: "virtCCA: Virtualized Arm Confidential Compute Architecture with TrustZone"
 
 
 authors:
-  - ""
-  
+  - Xiangyi Xu
+  - Wenhao Wang
+  - Yongzheng Wu
+  - Chenyu Wang
+  - Huifeng Zhu
+  - Haocheng Ma
+  - Zhennan Min
+  - Zixuan Pang
+  - Rui Hou
+  - Yier Jin
+
 institutions:
-  - ""
+  - "Huawei Technologies"
+  - "Chinese Academy of Sciences"
+  - "University of Chinese Academy of Sciences"
+  - "Shanghai Jiao Tong University"
+  - "University of Science and Technology of China"
+
 
 year: 2023
-paper: ""
-venue: ""
+paper: "https://arxiv.org/abs/2306.11011"
+venue: "arxiv"

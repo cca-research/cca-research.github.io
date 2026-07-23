@@ -13,16 +13,6 @@ institutions:
 year: 2024
 venue: USENIX Security
 
-hardware:
-  -  Zynq UltraScale
-
-simulation:
-  - Arm FVP
-
-keywords:
-  - accelerators
-  - PCIe
-
-paper: https://www.usenix.org/conference/usenixsecurity24/presentation/sridhara
+paper: https://www.usenix.org/system/files/usenixsecurity24-sridhara.pdf
 code: https://github.com/sectrs-acai/acai
-
+web: "https://www.usenix.org/conference/usenixsecurity24/presentation/sridhara"

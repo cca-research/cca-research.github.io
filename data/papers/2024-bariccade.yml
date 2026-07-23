@@ -2,11 +2,14 @@ title: "BarriCCAde: Isolating Closed-Source Drivers with ARM CCA"
 
 
 authors:
-  - ""
-  
+  - Matti Schulze
+  - Christian Lindenmeier
+  - Jonas Röckl
+
 institutions:
-  - ""
+  - "FAU Erlangen-Nürnberg"
 
 year: 2024
-paper: ""
-venue: ""
+paper: "https://systex24.github.io/papers/systex24-final97.pdf"
+venue: "SysTeX"
+web: "https://ieeexplore.ieee.org/document/10628727"

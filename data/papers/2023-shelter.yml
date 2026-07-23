@@ -18,14 +18,6 @@ institutions:
 year: 2023
 venue: USENIX Security
 
-hardware:
-  - Juno R2
-
-simulation:
-  - Arm FVP
-
-keywords:
-  - userspace
-
-paper: https://www.usenix.org/conference/usenixsecurity23/presentation/zhang-yiming
+paper: "https://www.usenix.org/system/files/usenixsecurity23-zhang-yiming.pdf"
 code: https://github.com/Compass-All/SHELTER
+web: "https://www.usenix.org/conference/usenixsecurity23/presentation/zhang-yiming"

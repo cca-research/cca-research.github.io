@@ -18,8 +18,8 @@
   }
 
   // Precompute searchable text per row, excluding hidden field-label spans
-  // (mobile-only captions like "Keywords"/"Hardware") so the search box
-  // can't accidentally match on a label instead of real content.
+  // (mobile-only captions) so the search box can't accidentally match on
+  // a label instead of real content.
   rows.forEach(function (row) {
     var clone = row.cloneNode(true);
     clone.querySelectorAll(".field-label").forEach(function (node) { node.remove(); });
@@ -34,10 +34,7 @@
   // directly reflecting a simple tr[data-*] attribute.
   var TEXT_SELECTORS = {
     title: ".paper-title",
-    institution: ".institutions",
-    hardware: ".hardware-list",
-    simulation: ".simulation-list",
-    keywords: ".keywords-list"
+    institution: ".institutions"
   };
 
   function sortValue(row, th) {
@@ -136,10 +133,7 @@
   // type "list": dataset attribute holds "|"-delimited values.
   var FILTERS = [
     { col: "year", attr: "year", type: "exact" },
-    { col: "keywords", attr: "keywords", type: "list" },
     { col: "venue", attr: "venue", type: "exact" },
-    { col: "hardware", attr: "hardware", type: "list" },
-    { col: "simulation", attr: "simulation", type: "list" },
     { col: "institution", attr: "institutions", type: "list" }
   ].map(function (filter) {
     var container = document.querySelector('.filter-dropdown[data-filter="' + filter.col + '"]');

@@ -1,11 +1,22 @@
-title: "Fortifypatch: Towards tamper-resistant live patching in linux-based hypervisor"
+title: "FortifyPatch: Towards Tamper-Resistant Live Patching in Linux-Based Hypervisor"
 
 authors:
-  - ""
+  - Zhenyu Ye
+  - Lei Zhou
+  - Fengwei Zhang
+  - Wenqiang Jin
+  - Zhenyu Ning
+  - Yupeng Hu
+  - Zheng Qin
+
+
   
 institutions:
-  - ""
+  - "Hunan University China"
+  - "National University of Defense Technology China"
+  - "Southern University of Science and Technology China"
 
 year: 2024
-paper: ""
-venue: ""
+paper: "https://dl.acm.org/doi/10.1145/3650212.3652108"
+venue: "ISSTA"
+code: "https://github.com/HammerSecurity-Lab/FortifyPatch"

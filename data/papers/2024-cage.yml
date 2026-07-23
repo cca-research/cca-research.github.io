@@ -22,14 +22,4 @@ code: https://github.com/Compass-All/NDSS24-CAGE
 
 venue: NDSS
 
-hardware:
-  - Juno R2
-
-simulation:
-  - Arm FVP
-
-keywords:
-  - accelerators
-  - GPU  
-
 

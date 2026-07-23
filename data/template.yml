@@ -16,18 +16,6 @@ venue: Short Name of conference
 # optional fields:
 month: 6 # not shown, but to order paper within a year
 
-keywords:
-  - keyword 1
-  - keyword 2
-
-hardware:
-  - Board 1
-  - Board 2
-
-simulation:
-  - Arm FVP
-  - QEMU
-
 code: https://github.com/code
 slides: https://github.com/slides
 web: https://github.com/website

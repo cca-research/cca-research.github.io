@@ -1,11 +1,16 @@
 title: "CPC: Flexible, Secure, and Efficient CVM Maintenance with Confidential Procedure Calls"
 
 authors:
-  - ""
+  - Jiahao Chen
+  - Zeyu Mi
+  - Yubin Xia
+  - Haibing Guan
+  - Haibo Chen
   
 institutions:
-  - ""
+  - "Shanghai Jiao Tong University"
 
 year: 2024
-paper: ""
-venue: ""
+
+venue: "Usenix ATC"
+paper: "https://www.usenix.org/conference/atc24/presentation/chen-jiahao"
