@@ -5,7 +5,12 @@ on:
     paths:
       - "data/papers/**"
   workflow_dispatch:
-  
+  push:
+    branches:
+      - master
+    paths:
+      - "data/papers/**"
+      
 permissions:
   pull-requests: write
   contents: read 
