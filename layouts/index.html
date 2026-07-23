@@ -5,7 +5,7 @@
 <div class="page">
   <header class="site-header">
     <p class="tagline">
-      A community-maintained overview of academic research on <a class="color-muted" href="https://www.arm.com/architecture/security-features/arm-confidential-compute-architecture">Arm Confidential Compute Architecture</a>.
+      A curated overview of academic research on <a class="color-muted" href="https://www.arm.com/architecture/security-features/arm-confidential-compute-architecture">Arm Confidential Compute Architecture</a>.
     </p>
 
     <input
@@ -120,12 +120,12 @@
   </main>
 
   <footer class="site-footer">
-    <p>If you found a mistake or want to a new paper, please open a pull request on
+    <p>Found a mistake or a missing paper? Please open a pull request on 
       {{ with .Site.Params.githubRepo }}<a href="{{ . }}" target="_blank" rel="noopener">GitHub</a>{{ end }}.
     </p>
     <div class="footer-credit">
       {{ with .Site.Params.openCcaUrl }}
-      <p>Created by <a href="{{ . }}" target="_blank" rel="noopener">OpenCCA</a></p>
+      <p>Maintained by A. Bertschi as part of <a href="{{ . }}" target="_blank" rel="noopener">OpenCCA</a></p>
       {{ end }}
     </div>
   </footer>

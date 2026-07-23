@@ -2,7 +2,7 @@
 [![Validate papers](https://github.com/cca-research/cca-research.github.io/actions/workflows/validate-papers.yml/badge.svg)](https://github.com/cca-research/cca-research.github.io/actions/workflows/validate-papers.yml)
 # CCA Research Index
 
-> A community-maintained overview of academic research on Arm Confidential
+> An overview of academic research on Arm Confidential
 > Compute Architecture.  
 > https://cca-research.github.io
 
