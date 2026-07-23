@@ -1,11 +1,18 @@
 title: "SoK: A comparison study of arm TrustZone and CCA"
 
 authors:
-  - ""
-  
+  - Haoyang Huang
+  - Fengwei Zhang
+  - Shoumeng Yan
+  - Tao Wei
+  - Zhengyu He
+
 institutions:
-  - ""
+  - "Southern University of Science and Technology"
+  - "Ant Group"
 
 year: 2024
-paper: ""
-venue: ""
+paper: "https://fengweiz.github.io/paper/sok-seed24.pdf"
+venue: "SEED"
+web: https://www.computer.org/csdl/proceedings-article/seed/2024/056500a107/21COzEFFSFO
+slides: https://fengweiz.github.io/paper/sok-seed24-slides.pdf
