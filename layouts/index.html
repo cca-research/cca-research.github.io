@@ -89,7 +89,7 @@
                 <span class="title-link-arrow">&#8599;</span></a>{{ else }}{{ .title }}{{ end }}
             </div>
             {{ if .authors }}
-            <div class="paper-authors">{{ delimit .authors ", " }}</div>
+            <div class="paper-authors">{{ range $i, $a := .authors }}{{ if $i }}, {{ end }}<span class="author-name">{{ $a }}</span>{{ end }}</div>
             {{ end }}
             {{ if or .code .slides .web .video }}
             <div class="paper-links">
