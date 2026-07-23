@@ -40,9 +40,7 @@ And open a pull request with your new file.
 Optional Fields:
 | Field          | Required | Type            | Notes                                |
 | -------------- | -------- | --------------- | ------------------------------------- |
-| `keywords`     | no       | list of strings | e.g. GPU, accelerator        |
-| `hardware`     | no       | list of strings | hardware platforms used        |
-| `simulation`   | no       | list of strings | simulators used    |
+| `month`        | no       | number          | month    |
 | `code`         | no       | string (URL)    | link to code             |
 | `slides`       | no       | string (URL)    | link to slides                  |
 | `video`        | no       | string (URL)    | link to video             |
