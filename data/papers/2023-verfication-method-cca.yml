@@ -1,0 +1,20 @@
+title: "A Verification Methodology for the Arm Confidential Computing Architecture: From a Secure Specification to Safe Implementations"
+authors:
+- Anthony C. J. Fox
+- Gareth Stockwell
+- Shale Xiong
+- Hanno Becker
+- Dominic P. Mulligan
+- Gustavo Petri
+- Nathan Chong
+
+institutions:
+- Arm
+- Amazon Web Services
+
+year: 2023
+month: 1
+venue: OOPSLA
+
+paper: "https://nchong.github.io/papers/oopsla23.pdf"
+web: "https://dl.acm.org/doi/10.1145/3586040"
