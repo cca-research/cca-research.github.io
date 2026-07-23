@@ -12,7 +12,7 @@ authors:
   - Zhengyu He
   
 institutions:
-  - Southern University of Science and Technology
+  - Southern University of Science and Technology China
   - The Hong Kong Polytechnic University
   - Chinese Academy of Sciences
   - Singapore Management University
@@ -20,6 +20,8 @@ institutions:
   - Ant Group
 
 year: 2025
+month: 2
+
 paper: "https://www.ndss-symposium.org/wp-content/uploads/2025-147-paper.pdf"
 venue: "NDSS"
 web: https://www.ndss-symposium.org/ndss-paper/scrutinizer-towards-secure-forensics-on-compromised-trustzone/

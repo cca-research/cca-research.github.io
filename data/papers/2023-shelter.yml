@@ -10,12 +10,13 @@ authors:
   - Zhengyu He
 
 institutions:
-  - Southern University of Science and Technology
+  - Southern University of Science and Technology China
   - The Hong Kong Polytechnic University
   - Hunan University
   - Ant Group
 
 year: 2023
+month: 8
 venue: USENIX Security
 
 paper: "https://www.usenix.org/system/files/usenixsecurity23-zhang-yiming.pdf"

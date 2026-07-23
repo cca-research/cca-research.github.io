@@ -11,6 +11,8 @@ institutions:
   - "Georgia Institute of Technology"
 
 year: 2026
+month: 3
+
 paper: "https://taesoo.kim/pubs/2026/choi:scope.pdf"
 venue: "ASPLOS"
 web: https://dl.acm.org/doi/10.1145/3779212.3790152

@@ -9,6 +9,8 @@ institutions:
   - Google
 
 year: 2024
+month: 4
+
 paper: "https://ab.id.au/papers/coregapvm-asplos24.pdf"
 venue: "ASPLOS"
 web: "https://research.google/pubs/sharing-is-leaking-blocking-transient-execution-attacks-with-core-gapped-confidential-vms/"

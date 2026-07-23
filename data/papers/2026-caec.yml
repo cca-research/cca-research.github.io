@@ -12,6 +12,8 @@ institutions:
   - Dartmouth College
 
 year: 2026
+month: 6
+
 paper: "https://arxiv.org/pdf/2512.01594"
 venue: "EuroSP"
 code: https://github.com/comet-cc/CAEC

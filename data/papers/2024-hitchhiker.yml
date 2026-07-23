@@ -12,7 +12,7 @@ authors:
 institutions:
   - National University of Singapore
   - Hangzhou China
-  - Southern University of Science and Technology Shenzhen
+  - Southern University of Science and Technology China
   - The Hong Kong Polytechnic University
   - Arizona State University
   - Huazhong University of Science and Technology Wuhan
@@ -20,6 +20,8 @@ institutions:
 
 
 year: 2024
+month: 10
+
 paper: https://fengweiz.github.io/paper/hitchhiker-ccs24.pdf
 web: "https://dl.acm.org/doi/10.1145/3658644.3690188"
 venue: "CCS"
