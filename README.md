@@ -1,4 +1,4 @@
-# Arm CCA Research Papers
+# CCA Research Index
 
 > A community-maintained overview of academic research on Arm Confidential
 > Compute Architecture.

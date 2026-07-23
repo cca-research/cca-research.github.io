@@ -1,6 +1,6 @@
 baseURL = "https://cca-research.github.io/"
 locale = "en-us"
-title = "Arm CCA Research Papers"
+title = "CCA Research Index"
 disableKinds = ["taxonomy", "term"]
 
 [params]
