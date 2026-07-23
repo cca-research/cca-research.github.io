@@ -6,6 +6,18 @@
   <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} · {{ .Site.Title }}{{ end }}</title>
   <meta name="description" content="{{ .Site.Params.description }}">
   <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+
+    <!--  Essential META Tags -->
+  <meta property="og:title" content="Arm CCA Research Academic Paper List">
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://cca-research.github.io">
+   <!-- <meta name="twitter:card" content="summary_large_image"> -->
+   <!-- <meta property="og:image" content="thumbnail.jpg"> -->
+
+  <!--  Non-Essential,  -->
+  <meta property="og:description" content="An overview of academic research on Arm Confidential Compute Architecture">
+  <meta property="og:site_name" content="Arm CCA Research">
+  <!-- <meta name="twitter:image:alt" content="Alt text for image"> -->
   
   <script>
     (function () {

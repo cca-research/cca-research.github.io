@@ -9,14 +9,12 @@ institutions:
   - University 2
 
 year: 2025
-paper: https://github.com/paper.pdf
 
 venue: Short Name of conference
+paper: https://github.com/paper.pdf
 
 # optional fields:
-month: 6 # not shown, but to order paper within a year
-
+month: 6
 code: https://github.com/code
 slides: https://github.com/slides
 web: https://github.com/website
-video: https://github.com/video

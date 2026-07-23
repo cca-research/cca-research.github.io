@@ -40,10 +40,9 @@ And open a pull request with your new file.
 Optional Fields:
 | Field          | Required | Type            | Notes                                |
 | -------------- | -------- | --------------- | ------------------------------------- |
-| `month`        | no       | number          | month    |
+| `month`        | no       | number          | month, useful to sort papers    |
 | `code`         | no       | string (URL)    | link to code             |
 | `slides`       | no       | string (URL)    | link to slides                  |
-| `video`        | no       | string (URL)    | link to video             |
 | `web`          | no       | string (URL)    | link to a website                    |
 
 
