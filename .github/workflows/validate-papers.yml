@@ -26,7 +26,7 @@ jobs:
         id: validate
         run: |
           set +e
-          python3 scripts/validate_papers.py > report.md
+          python3 scripts/validate.py > report.md
           echo "exit_code=$?" >> "$GITHUB_OUTPUT"
           cat report.md >> "$GITHUB_STEP_SUMMARY"
 
