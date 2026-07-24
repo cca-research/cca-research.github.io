@@ -19,5 +19,7 @@ month: 10
 
 paper: "https://arxiv.org/abs/2408.05835"
 venue: "RAID"
-web: "https://sectrs-devlore.github.io/"
-code: https://github.com/sectrs-devlore
+
+# no code yet
+# web: "https://sectrs-devlore.github.io/"
+# code: https://github.com/sectrs-devlore
