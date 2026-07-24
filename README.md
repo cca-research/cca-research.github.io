@@ -50,4 +50,11 @@ Optional Fields:
 
 
 
+## Validate Paper files
 
+```sh
+# On linux
+make validate
+```
+
+See [Makefile](./Makefile) for details.
