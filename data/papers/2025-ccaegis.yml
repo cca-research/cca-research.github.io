@@ -1,0 +1,26 @@
+title: "More Granular, Less Trust: Enforcing Intra-Process Isolation With Arm CCA in an Untrusted Management Environment"
+
+authors:
+- Shiqi Liu
+- Zhouqi Jiang
+- Jie Wang
+- Wei Zhou
+- Kun Sun
+- Zhaohui Chen
+- Yulai Xie
+
+institutions:
+- Huazhong University of Science and Technology
+- JinYinHu Laboratory
+- George Mason University
+- Peking University
+- Alibaba Group
+
+venue: TIFS
+
+year: 2025
+
+code: https://github.com/erhade/CCAegis
+
+# is there a pdf not behind paywall?
+paper: https://ieeexplore.ieee.org/document/11259490
