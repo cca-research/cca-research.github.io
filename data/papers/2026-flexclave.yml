@@ -1,0 +1,35 @@
+title: "FlexClave: An Extensible and Secure Trusted Execution Environment Framework"
+
+authors:
+  - "Qihang Zhou"
+  - "Wenzhuo Cao"
+  - "Xiaoqi Jia"
+  - "Shaowen Xu"
+  - "Jiayun Chen"
+  - "Nan Jiang"
+  - "Zhicong Zhang"
+  - "Zhenyu Song"
+  - "Haichao Du"
+  - "Yamin Xie"
+  - "Chen Song"
+  - "Jing Tang"
+  - "Peijie Yin"
+  - "Shengzhi Zhang"
+  - "Peng Liu"
+
+institutions:
+  - "Chinese Academy of Sciences"
+  - "University of Chinese Academy of Sciences"
+  - "Xi'an Electronic Engineering Research Institute"
+  - "Boston University"
+  - "Pennsylvania State University"
+
+year: 2026
+month: 04
+
+paper: "https://ieeexplore.ieee.org/document/11357544"
+venue: "Transactions on Computers"
+
+# no code yet
+# web: "https://sectrs-devlore.github.io/"
+# code: https://github.com/sectrs-devlore
